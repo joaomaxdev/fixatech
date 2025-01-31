@@ -1,17 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AdminDashboard from "./pages/AdminDashboard";
-import TechnicianDashboard from "./pages/TechnicianDashboard";
-import SupervisorDashboard from "./pages/SupervisorDashboard";
+import { ToastContainer } from "react-toastify";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "react-toastify/dist/ReactToastify.css";
+import { AppRoutes } from "./routes/Routes";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<AdminDashboard />} />
-        <Route path="/tecnico" element={<TechnicianDashboard />} />
-        <Route path="/supervisor" element={<SupervisorDashboard />} />
-      </Routes>
-    </Router>
+    <>
+      <ToastContainer />
+      <AppRoutes /> {/* Certifique-se de que AppRoutes está sendo usado aqui */}
+    </>
   );
 }
 
